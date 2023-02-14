@@ -1,0 +1,15 @@
+@import './colors';
+@import './media-queries';
+@import './typography';
+
+html,
+body {
+  margin: 0;
+  font-family: ChiayiCityFont;
+  color: $White;
+  background-color: $SplashScreen;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}

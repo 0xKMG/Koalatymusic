@@ -1,0 +1,41 @@
+.balloonGame {
+  svg {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.gameArea {
+  position: absolute;
+  width: 96vw;
+  height: 100vh;
+  margin: 0% 2%;
+  top: 0;
+}
+
+.staff {
+  position: relative;
+  width: 83%;
+  display: inline-block;
+  margin: 6% 8.5%;
+}
+
+.bearContainer {
+  position: absolute;
+  width: 48vw;
+  bottom: 4vh;
+  left: 24vw;
+}
+
+.helpButton {
+  position: fixed;
+  width: 12.5%;
+  right: 2%;
+  bottom: 1%;
+}
+
+.flyingBee {
+  right: 0px;
+  transform: translate(0, 0);
+  transition: transform 0.3s ease-in-out;
+}

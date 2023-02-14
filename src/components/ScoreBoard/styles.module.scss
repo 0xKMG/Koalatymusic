@@ -1,0 +1,35 @@
+@import 'styles/general';
+
+.scoreBoard {
+  position: relative;
+
+  .area {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    .timer {
+      @include flex-center;
+      font-family: Anima;
+      font-size: 4vw;
+      color: #ff5562;
+      -webkit-text-stroke: 2px white;
+      height: 38%;
+    }
+
+    .score {
+      @include flex-center;
+      font-family: Anima;
+      font-size: 4.5vw;
+      color: #603813;
+      -webkit-text-stroke: 2px white;
+      height: 56%;
+      justify-content: space-evenly;
+
+      .star {
+        width: 25%;
+      }
+    }
+  }
+}

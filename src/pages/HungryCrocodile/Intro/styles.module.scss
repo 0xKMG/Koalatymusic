@@ -1,0 +1,17 @@
+.outer {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+  gap: 50px;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  width: 90%;
+
+  &.disabled {
+    filter: grayscale(90%);
+  }
+}

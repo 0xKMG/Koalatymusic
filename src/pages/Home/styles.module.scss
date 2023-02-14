@@ -1,0 +1,37 @@
+@import 'styles/general';
+@import 'styles/colors';
+
+.menu {
+  @include transform-center;
+  width: 100%;
+  height: auto;
+}
+
+.game {
+  font-size: 3vw;
+  color: $White;
+  margin: 30px;
+  width: 45%;
+  font-family: ChiayiCityFont;
+  &List {
+    width: 80%;
+    max-width: 800px;
+    margin: auto;
+
+    &Item {
+      @include flex-center;
+      position: absolute;
+      top: 0;
+    }
+  }
+}
+.wood {
+  width: 100%;
+
+  &Container {
+    width: 70%;
+    flex-direction: column;
+    max-width: 1200px;
+    max-height: 1024px;
+  }
+}

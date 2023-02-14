@@ -1,0 +1,75 @@
+.staff {
+  position: absolute;
+  width: 100%;
+  z-index: 0;
+}
+
+.clef {
+  position: absolute;
+  height: auto;
+  top: 0;
+  z-index: 1;
+
+  &Bass {
+    width: 12%;
+    margin: 5.5% 1%;
+  }
+  &Treble {
+    width: 9.5%;
+    margin: 3% 1%;
+  }
+  &.misMatch {
+    animation: highlight 1s;
+  }
+}
+
+.balloons {
+  position: absolute;
+  display: flex;
+  opacity: 1;
+  &.hidden {
+    display: none;
+  }
+  &.hint {
+    opacity: 0.5;
+  }
+  svg {
+    height: 100%;
+  }
+}
+
+.shadow {
+  position: absolute;
+  display: block;
+  border: 1px dashed #bebebe;
+  color: #bebebe;
+  border-radius: 50%;
+  width: calc(3vw);
+  height: auto;
+  aspect-ratio: 1;
+  text-align: center;
+  font-size: 2vw;
+  opacity: 0.6;
+  left: 12%;
+  &.bass {
+    left: 14%;
+  }
+}
+
+@keyframes highlight {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(0.6);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(0.6);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

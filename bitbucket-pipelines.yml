@@ -1,0 +1,59 @@
+image: node:12
+pipelines:
+    branches:
+        master:
+            - step:
+                  name: "build and deploy"
+                  caches:
+                      - node
+                  script: # Modify the commands below to build your repository.
+                      - mv .env.production.sample .env
+                      - npm install
+                      - unset CI
+                      - npm run build
+                      - pipe: atlassian/aws-s3-deploy:0.4.0
+                        variables:
+                            AWS_ACCESS_KEY_ID: $KOALATY_AWS_ACCESS_KEY_ID
+                            AWS_SECRET_ACCESS_KEY: $KOALATY_AWS_SECRET_ACCESS_KEY
+                            AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION
+                            S3_BUCKET: "koalaty-game-prod"
+                            LOCAL_PATH: "build"
+                            ACL: "public-read"
+                    #   - pipe: atlassian/aws-cloudfront-invalidate:0.1.1
+                    #     variables:
+                    #         AWS_ACCESS_KEY_ID: $KOALATY_AWS_ACCESS_KEY_ID
+                    #         AWS_SECRET_ACCESS_KEY: $KOALATY_AWS_SECRET_ACCESS_KEY
+                    #         AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION
+                    #         DISTRIBUTION_ID: ""
+                      - pipe: atlassian/slack-notify:0.3.3
+                        variables:
+                            WEBHOOK_URL: $WEBHOOK_URL
+                            MESSAGE: "koalaty-game-prod ($BITBUCKET_COMMIT) deployed to PROD - "
+        develop:
+            - step:
+                  name: "build and deploy"
+                  caches:
+                      - node
+                  script: # Modify the commands below to build your repository.
+                      - mv .env.uat.sample .env
+                      - npm install
+                      - unset CI
+                      - npm run build
+                      - pipe: atlassian/aws-s3-deploy:0.4.0
+                        variables:
+                            AWS_ACCESS_KEY_ID: $KOALATY_AWS_ACCESS_KEY_ID
+                            AWS_SECRET_ACCESS_KEY: $KOALATY_AWS_SECRET_ACCESS_KEY
+                            AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION
+                            S3_BUCKET: "koalaty-game-uat"
+                            LOCAL_PATH: "build"
+                            ACL: "public-read"
+                    #   - pipe: atlassian/aws-cloudfront-invalidate:0.1.1
+                    #     variables:
+                    #         AWS_ACCESS_KEY_ID: $KOALATY_AWS_ACCESS_KEY_ID
+                    #         AWS_SECRET_ACCESS_KEY: $KOALATY_AWS_SECRET_ACCESS_KEY
+                    #         AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION
+                    #         DISTRIBUTION_ID: ""
+                      - pipe: atlassian/slack-notify:0.3.3
+                        variables:
+                            WEBHOOK_URL: $WEBHOOK_URL
+                            MESSAGE: "koalaty-game-uat ($BITBUCKET_COMMIT) deployed to UAT - "

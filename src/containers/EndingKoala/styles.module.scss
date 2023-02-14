@@ -1,0 +1,66 @@
+@import 'styles/general';
+@import 'styles/colors';
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  .model {
+    @include transform-center;
+
+    &Aspect {
+      position: relative;
+
+      aspect-ratio: 380/270;
+    }
+
+    & svg {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .content {
+    position: relative;
+    width: 65%;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 3%;
+    & > * {
+      width: 50%;
+      transform: translateX(50%);
+    }
+
+    &Right {
+      align-items: end;
+    }
+
+    .button {
+      &Area {
+        position: relative;
+        bottom: 2%;
+        height: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        gap: 4%;
+        button {
+          color: $White;
+          background-color: $WoodBrown;
+          font-family: ChiayiCityFont;
+          font-size: 1.35vw;
+          text-transform: uppercase;
+          border: 0;
+          outline: unset;
+          border-radius: 45px;
+          padding: 1vw;
+        }
+      }
+    }
+  }
+}

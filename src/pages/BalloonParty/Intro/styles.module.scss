@@ -1,0 +1,34 @@
+@import 'styles/general';
+
+.outer {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.level {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: -10%;
+  .button {
+    width: 33%;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.spectrum {
+  width: 80%;
+  margin: auto;
+
+  svg {
+    height: auto;
+  }
+}
+
+.button {
+  position: relative;
+  z-index: 2;
+}

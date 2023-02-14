@@ -1,0 +1,26 @@
+@import 'styles/general';
+
+.draggableBalloon {
+  position: relative;
+  width: 8%;
+}
+
+.balloon {
+  position: absolute;
+}
+
+.scale {
+  @include flex-center;
+  position: absolute;
+  font-family: ChiayiCityFont;
+  color: black;
+  font-size: 3vw;
+  height: auto;
+  aspect-ratio: 1.1;
+
+  &.answered {
+    width: 60%;
+    align-items: end;
+    font-size: 2.5vw;
+  }
+}
