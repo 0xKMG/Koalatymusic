@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-wrap-multilines */
 import AudioController from 'containers/AudioController';
 import BalloonPartyProvider from 'context/BalloonParty';
 import { BalloonPartyIntro, BalloonPartyGame, BalloonPartyResult } from 'pages/BalloonParty';
@@ -22,11 +23,11 @@ const Router = (): JSX.Element => (
         <Route path="/BalloonParty/">
           <Route
             index
-            element={(
+            element={
               <BalloonPartyProvider>
                 <BalloonPartyGame />
               </BalloonPartyProvider>
-            )}
+            }
           />
           <Route path="intro" element={<BalloonPartyIntro />} />
           <Route path="result" element={<BalloonPartyResult />} />
