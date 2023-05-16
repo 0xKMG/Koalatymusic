@@ -34,9 +34,12 @@
   cursor: pointer;
   transition: transform 0.7s ease, opacity 0.7s ease;
   opacity: 1;
-
-  &:active {
-    opacity: 0.7; // Makes the button slightly transparent when active
-    transform: scale(0.95); // Makes the button slightly smaller when active
+  // &:active {
+  //   opacity: 0.7; // Makes the button slightly transparent when active
+  //   transform: scale(0.95); // Makes the button slightly smaller when active
+  // }
+  &:focus {
+    transform: scale(1.1); /* You can adjust the value to get the desired effect */
+  outline: none; /* Removes the default browser outline */
   }
 }
