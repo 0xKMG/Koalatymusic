@@ -1,5 +1,7 @@
 import { CrocodileIntroFiveLineSpectrum } from 'assets/svgs';
 import background from 'assets/images/Hungry_Crocodile_Game_Intro_Background.png';
+import instructionPageLine from 'assets/images/instructionPageLine.png';
+import instructionPageSpace from 'assets/images/instructionPageSpace.png';
 import { BackgroundImage, CrocodileMode, CrocodileModel, CrocodileStatus } from 'components';
 import { useCountdown, useGameMode, useGameScore } from 'hooks';
 import Draggable, { DraggableCore, DraggableData, DraggableEvent } from 'react-draggable';
@@ -29,6 +31,11 @@ export const HungryCrocodileGame = (): JSX.Element => {
   // state
   const [fruits, setFruits] = useState<IFruitNode[]>([]);
   const [crocodileStatus, setCrocodileStatus] = useState<CrocodileStatus>(0);
+  const [isPaused, setIsPaused] = useState(false);
+
+  const togglePause = () => {
+    setIsPaused(!isPaused);
+  };
 
   const scoreIncrease = async (add: number) => {
     scoreRef.current += add;
@@ -168,6 +175,9 @@ export const HungryCrocodileGame = (): JSX.Element => {
             </div>
           </div>
         </div>
+        <button type="button" onClick={togglePause}>
+          {isPaused ? 'Resume' : 'Pause'}
+        </button>
       </BackgroundImage>
     </div>
   );

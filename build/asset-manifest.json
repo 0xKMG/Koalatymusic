@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/static/css/main.7036cd93.css",
+    "main.js": "/static/js/main.9c8b8c95.js",
+    "static/js/845.66a0e0c8.chunk.js": "/static/js/845.66a0e0c8.chunk.js",
+    "static/js/787.c9c8973b.chunk.js": "/static/js/787.c9c8973b.chunk.js",
+    "static/media/Put_a_Smile_On.mp3": "/static/media/Put_a_Smile_On.295e6f62a0562386e06e.mp3",
+    "static/media/Kids_are_Happy.mp3": "/static/media/Kids_are_Happy.2193b752c7dd371f4fc3.mp3",
+    "static/media/CheerfulUkulele_146_Ending_JHungerMusic.mp3": "/static/media/CheerfulUkulele_146_Ending_JHungerMusic.8fd72e34d7947cf416cc.mp3",
+    "static/media/Casual_Funny_Children_Game.mp3": "/static/media/Casual_Funny_Children_Game.a15862d950056e86d16c.mp3",
+    "static/media/Funny_Children's_Games.mp3": "/static/media/Funny_Children's_Games.d865f0aa48af8715502b.mp3",
+    "static/media/Balloon_Party_Game_Intro_Background.png": "/static/media/Balloon_Party_Game_Intro_Background.e832f956d1bdd7a1351c.png",
+    "static/media/Hungry_Crocodile_Game_Intro_Background.png": "/static/media/Hungry_Crocodile_Game_Intro_Background.a8f3b6f75076ab4a7713.png",
+    "static/media/Balloon_Party_Thumbnail.png": "/static/media/Balloon_Party_Thumbnail.3a6160ab43eff18e3c45.png",
+    "static/media/Hungry_Crocodile_Wood.png": "/static/media/Hungry_Crocodile_Wood.e9843084a4e1b854ce09.png",
+    "static/media/Balloon_Party_Wood.png": "/static/media/Balloon_Party_Wood.627e7d8b47bea3842afb.png",
+    "static/media/Balloon_Party_Level_Treble.png": "/static/media/Balloon_Party_Level_Treble.0227e95fd50d08d43f25.png",
+    "static/media/Balloon_Party_Level_Shuffle.png": "/static/media/Balloon_Party_Level_Shuffle.1c77b207674db8545cbd.png",
+    "static/media/Hungry_Crocodile_Thumbnail.png": "/static/media/Hungry_Crocodile_Thumbnail.8317e304e1c975bbe1c5.png",
+    "static/media/Balloon_Party_Level_Bass.png": "/static/media/Balloon_Party_Level_Bass.cf934a1a3cfd2cf7a659.png",
+    "static/media/ChiayiCityFont-Bold.ttf": "/static/media/ChiayiCityFont-Bold.98e379d86bde80039eca.ttf",
+    "static/media/Wood_Nice_Try.png": "/static/media/Wood_Nice_Try.b14da03454f8b26863c6.png",
+    "static/media/Wood_Well_Done.png": "/static/media/Wood_Well_Done.5c5e6525639b5d0a3754.png",
+    "static/media/Pop_Ding_Notification_Sound.mp3": "/static/media/Pop_Ding_Notification_Sound.cb0fba2db44ebfc2d051.mp3",
+    "static/media/Splash_Screen.mp3": "/static/media/Splash_Screen.97b582bf774fadb33bd0.mp3",
+    "static/media/Game_Menu_Click.mp3": "/static/media/Game_Menu_Click.55ece48a4c8d4647ffa3.mp3",
+    "static/media/Anima.ttf": "/static/media/Anima.64ad78d7dcfabc4ad231.ttf",
+    "static/media/Quest_Game_UI_Menu_UI_Click_2_Balloon.mp3": "/static/media/Quest_Game_UI_Menu_UI_Click_2_Balloon.d7090fbd65607af55954.mp3",
+    "index.html": "/index.html",
+    "main.7036cd93.css.map": "/static/css/main.7036cd93.css.map",
+    "main.9c8b8c95.js.map": "/static/js/main.9c8b8c95.js.map",
+    "845.66a0e0c8.chunk.js.map": "/static/js/845.66a0e0c8.chunk.js.map",
+    "787.c9c8973b.chunk.js.map": "/static/js/787.c9c8973b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7036cd93.css",
+    "static/js/main.9c8b8c95.js"
+  ]
+}
