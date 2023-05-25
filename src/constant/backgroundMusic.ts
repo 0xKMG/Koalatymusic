@@ -1,8 +1,9 @@
-import menu from 'assets/audio/Put_a_Smile_On.mp3';
+// import menu from 'assets/audio/Put_a_Smile_On.mp3';
 import crocodileIntro from 'assets/audio/Kids_are_Happy.mp3';
 import crocodile from "assets/audio/Funny_Children's_Games.mp3";
-import balloon from 'assets/audio/CheerfulUkulele_146_Ending_JHungerMusic.mp3';
-import balloonIntro from 'assets/audio/Casual_Funny_Children_Game.mp3';
+import muted from 'assets/audio/Muted.mp3';
+// import balloon from 'assets/audio/CheerfulUkulele_146_Ending_JHungerMusic.mp3';
+// import balloonIntro from 'assets/audio/Casual_Funny_Children_Game.mp3';
 import splashScreenAudio from 'assets/audio/Splash_Screen.mp3';
 
 export enum PagesPath {
@@ -18,11 +19,11 @@ export type PagesPathType = `${PagesPath}`;
 
 export const BACKGROUND_MUSIC: Partial<Record<PagesPathType, string>> = {
   [PagesPath.SplashScreen]: splashScreenAudio,
-  [PagesPath.Menu]: menu,
+  [PagesPath.Menu]: muted,
   [PagesPath.Crocodile]: crocodile,
   [PagesPath.CrocodileIntro]: crocodileIntro,
-  [PagesPath.Balloon]: balloon,
-  [PagesPath.BalloonIntro]: balloonIntro,
+  [PagesPath.Balloon]: muted,
+  [PagesPath.BalloonIntro]: muted,
 };
 
 export default BACKGROUND_MUSIC;

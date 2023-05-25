@@ -175,9 +175,9 @@ export const HungryCrocodileGame = (): JSX.Element => {
             </div>
           </div>
         </div>
-        <button type="button" onClick={togglePause}>
+        {/* <button type="button" onClick={togglePause}>
           {isPaused ? 'Resume' : 'Pause'}
-        </button>
+        </button> */}
       </BackgroundImage>
     </div>
   );
