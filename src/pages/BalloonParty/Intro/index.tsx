@@ -32,6 +32,11 @@ export const BalloonPartyIntro = (): JSX.Element => {
     }
     setFreeze(false);
     setSpectrum(selection);
+    if (selection === Spectrum.Bass) {
+      playBass();
+    } else {
+      playTreble();
+    }
   };
 
   const handleRandomPick = async () => {
