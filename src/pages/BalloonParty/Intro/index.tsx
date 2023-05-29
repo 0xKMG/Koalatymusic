@@ -7,7 +7,8 @@ import { BalloonIntoBassClef, BalloonIntoTrebleClef } from 'assets/svgs';
 import { ImageButton } from 'components';
 import { useRef, useState } from 'react';
 import { Spectrum } from 'types';
-import audioEffect from 'assets/audio/Game_Menu_Click.mp3';
+import bassAudioEffect from 'assets/audio/Bass_Clef.mp3';
+import trebleAudioEffect from 'assets/audio/Treble_Clef.mp3';
 import useSound from 'use-sound';
 import { useNavigate } from 'react-router-dom';
 import sleep from 'sleep-promise';
@@ -17,7 +18,8 @@ import styles from './styles.module.scss';
 export const BalloonPartyIntro = (): JSX.Element => {
   const navigate = useNavigate();
   const { modeUpdate } = useGameMode('balloonPartyMode');
-  const [play] = useSound(audioEffect);
+  const [playBass] = useSound(bassAudioEffect);
+  const [playTreble] = useSound(trebleAudioEffect);
   // State
   const [spectrum, setSpectrum] = useState<Spectrum>();
   const [freeze, setFreeze] = useState<boolean>(true);
@@ -28,7 +30,6 @@ export const BalloonPartyIntro = (): JSX.Element => {
     if (shuffleRef.current) {
       return;
     }
-    play();
     setFreeze(false);
     setSpectrum(selection);
   };
@@ -37,7 +38,6 @@ export const BalloonPartyIntro = (): JSX.Element => {
     if (shuffleRef.current) {
       return;
     }
-    play();
     shuffleRef.current = true;
     setFreeze(true);
     let time = 0;
@@ -47,8 +47,13 @@ export const BalloonPartyIntro = (): JSX.Element => {
       // eslint-disable-next-line no-await-in-loop
       await sleep(Math.max(100, time * 30));
     } while (time < 12);
-    if (Math.random() > 0.5) setSpectrum(Spectrum.Bass);
-    else setSpectrum(Spectrum.Treble);
+    if (Math.random() > 0.5) {
+      playBass();
+      setSpectrum(Spectrum.Bass);
+    } else {
+      playTreble();
+      setSpectrum(Spectrum.Treble);
+    }
     shuffleRef.current = false;
     setFreeze(false);
   };
