@@ -18,25 +18,24 @@ const Router = (): JSX.Element => (
     <AudioController />
     <Routes>
       <Route index element={<SplashScreen />} />
-      <Route element={<ProtectedRoutes />}>
-        <Route path="/menu" element={<Home />} />
-        <Route path="/BalloonParty/">
-          <Route
-            index
-            element={
-              <BalloonPartyProvider>
-                <BalloonPartyGame />
-              </BalloonPartyProvider>
-            }
-          />
-          <Route path="intro" element={<BalloonPartyIntro />} />
-          <Route path="result" element={<BalloonPartyResult />} />
-        </Route>
-        <Route path="/HungryCrocodile/">
-          <Route index element={<HungryCrocodileGame />} />
-          <Route path="intro" element={<HungryCrocodileIntro />} />
-          <Route path="result" element={<HungryCrocodileResult />} />
-        </Route>
+
+      <Route path="/menu" element={<Home />} />
+      <Route path="/BalloonParty/">
+        <Route
+          index
+          element={
+            <BalloonPartyProvider>
+              <BalloonPartyGame />
+            </BalloonPartyProvider>
+          }
+        />
+        <Route path="intro" element={<BalloonPartyIntro />} />
+        <Route path="result" element={<BalloonPartyResult />} />
+      </Route>
+      <Route path="/HungryCrocodile/">
+        <Route index element={<HungryCrocodileGame />} />
+        <Route path="intro" element={<HungryCrocodileIntro />} />
+        <Route path="result" element={<HungryCrocodileResult />} />
       </Route>
     </Routes>
   </BrowserRouter>

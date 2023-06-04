@@ -12,7 +12,7 @@ export const AudioController = (): JSX.Element => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const [start, setStart] = useState<boolean>(false);
+  const [start, setStart] = useState<boolean>(true);
 
   const handlePlayedEnd = useCallback(() => {
     if (location.pathname === '/') {
@@ -33,6 +33,7 @@ export const AudioController = (): JSX.Element => {
           pause: <span />,
         }}
         src={BACKGROUND_MUSIC[location.pathname as PagesPathType]}
+        autoPlay
         ref={audioRef}
       />
     </div>
