@@ -1,13 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.7036cd93.css",
-    "main.js": "/static/js/main.9c8b8c95.js",
+    "main.css": "/static/css/main.be1fc115.css",
+    "main.js": "/static/js/main.8d36706e.js",
     "static/js/845.66a0e0c8.chunk.js": "/static/js/845.66a0e0c8.chunk.js",
     "static/js/787.c9c8973b.chunk.js": "/static/js/787.c9c8973b.chunk.js",
-    "static/media/Put_a_Smile_On.mp3": "/static/media/Put_a_Smile_On.295e6f62a0562386e06e.mp3",
     "static/media/Kids_are_Happy.mp3": "/static/media/Kids_are_Happy.2193b752c7dd371f4fc3.mp3",
-    "static/media/CheerfulUkulele_146_Ending_JHungerMusic.mp3": "/static/media/CheerfulUkulele_146_Ending_JHungerMusic.8fd72e34d7947cf416cc.mp3",
-    "static/media/Casual_Funny_Children_Game.mp3": "/static/media/Casual_Funny_Children_Game.a15862d950056e86d16c.mp3",
     "static/media/Funny_Children's_Games.mp3": "/static/media/Funny_Children's_Games.d865f0aa48af8715502b.mp3",
     "static/media/Balloon_Party_Game_Intro_Background.png": "/static/media/Balloon_Party_Game_Intro_Background.e832f956d1bdd7a1351c.png",
     "static/media/Hungry_Crocodile_Game_Intro_Background.png": "/static/media/Hungry_Crocodile_Game_Intro_Background.a8f3b6f75076ab4a7713.png",
@@ -23,17 +20,20 @@
     "static/media/Wood_Well_Done.png": "/static/media/Wood_Well_Done.5c5e6525639b5d0a3754.png",
     "static/media/Pop_Ding_Notification_Sound.mp3": "/static/media/Pop_Ding_Notification_Sound.cb0fba2db44ebfc2d051.mp3",
     "static/media/Splash_Screen.mp3": "/static/media/Splash_Screen.97b582bf774fadb33bd0.mp3",
+    "static/media/Muted.mp3": "/static/media/Muted.1c9ed9ef690f47a395e2.mp3",
     "static/media/Game_Menu_Click.mp3": "/static/media/Game_Menu_Click.55ece48a4c8d4647ffa3.mp3",
+    "static/media/Treble_Clef.mp3": "/static/media/Treble_Clef.3ef65c550d00b0f0bc96.mp3",
+    "static/media/Bass_Clef.mp3": "/static/media/Bass_Clef.6c96bbf31732c45ef981.mp3",
     "static/media/Anima.ttf": "/static/media/Anima.64ad78d7dcfabc4ad231.ttf",
     "static/media/Quest_Game_UI_Menu_UI_Click_2_Balloon.mp3": "/static/media/Quest_Game_UI_Menu_UI_Click_2_Balloon.d7090fbd65607af55954.mp3",
     "index.html": "/index.html",
-    "main.7036cd93.css.map": "/static/css/main.7036cd93.css.map",
-    "main.9c8b8c95.js.map": "/static/js/main.9c8b8c95.js.map",
+    "main.be1fc115.css.map": "/static/css/main.be1fc115.css.map",
+    "main.8d36706e.js.map": "/static/js/main.8d36706e.js.map",
     "845.66a0e0c8.chunk.js.map": "/static/js/845.66a0e0c8.chunk.js.map",
     "787.c9c8973b.chunk.js.map": "/static/js/787.c9c8973b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7036cd93.css",
-    "static/js/main.9c8b8c95.js"
+    "static/css/main.be1fc115.css",
+    "static/js/main.8d36706e.js"
   ]
 }

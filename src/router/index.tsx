@@ -6,11 +6,12 @@ import {
   HungryCrocodileGame,
   HungryCrocodileIntro,
   HungryCrocodileResult,
+  HungryCrocodileInstruction,
 } from 'pages/HungryCrocodile';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from '../pages/Home';
 import SplashScreen from '../pages/SplashScreen';
-import ProtectedRoutes from './ProtectedRoutes';
+// import ProtectedRoutes from './ProtectedRoutes';
 
 const Router = (): JSX.Element => (
   <BrowserRouter>
@@ -36,6 +37,7 @@ const Router = (): JSX.Element => (
         <Route index element={<HungryCrocodileGame />} />
         <Route path="intro" element={<HungryCrocodileIntro />} />
         <Route path="result" element={<HungryCrocodileResult />} />
+        <Route path="instruction" element={<HungryCrocodileInstruction />} />
       </Route>
     </Routes>
   </BrowserRouter>
