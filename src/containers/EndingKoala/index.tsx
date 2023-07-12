@@ -22,7 +22,7 @@ export const EndingKoala = memo(
 
     const handleHomeClick = () => {
       play();
-      navigate('/menu');
+      window.location.href = 'https://www.koalatymusic.com/';
     };
     const handlePlayAgainClick = () => {
       play();

@@ -8,6 +8,9 @@ import {
   HungryCrocodileResult,
   HungryCrocodileInstruction,
 } from 'pages/HungryCrocodile';
+
+import { ShellWePickGame, ShellWePickIntro, ShellWePickResult } from 'pages/ShellWePick';
+
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from '../pages/Home';
 import SplashScreen from '../pages/SplashScreen';
@@ -38,6 +41,11 @@ const Router = (): JSX.Element => (
         <Route path="intro" element={<HungryCrocodileIntro />} />
         <Route path="result" element={<HungryCrocodileResult />} />
         <Route path="instruction" element={<HungryCrocodileInstruction />} />
+      </Route>
+      <Route path="/ShellWePick/">
+        <Route index element={<ShellWePickGame />} />
+        <Route path="intro" element={<ShellWePickIntro />} />
+        <Route path="result" element={<ShellWePickResult />} />
       </Route>
     </Routes>
   </BrowserRouter>

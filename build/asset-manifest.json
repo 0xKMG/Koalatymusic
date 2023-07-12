@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.be1fc115.css",
-    "main.js": "/static/js/main.8d36706e.js",
+    "main.css": "/static/css/main.ee1de483.css",
+    "main.js": "/static/js/main.7e625426.js",
     "static/js/845.66a0e0c8.chunk.js": "/static/js/845.66a0e0c8.chunk.js",
     "static/js/787.c9c8973b.chunk.js": "/static/js/787.c9c8973b.chunk.js",
     "static/media/Kids_are_Happy.mp3": "/static/media/Kids_are_Happy.2193b752c7dd371f4fc3.mp3",
@@ -15,6 +15,8 @@
     "static/media/Balloon_Party_Level_Shuffle.png": "/static/media/Balloon_Party_Level_Shuffle.1c77b207674db8545cbd.png",
     "static/media/Hungry_Crocodile_Thumbnail.png": "/static/media/Hungry_Crocodile_Thumbnail.8317e304e1c975bbe1c5.png",
     "static/media/Balloon_Party_Level_Bass.png": "/static/media/Balloon_Party_Level_Bass.cf934a1a3cfd2cf7a659.png",
+    "static/media/instructionPageSpace.png": "/static/media/instructionPageSpace.5cacb27bf519015b8042.png",
+    "static/media/instructionPageLine.png": "/static/media/instructionPageLine.e2e09ab1f2177c524b79.png",
     "static/media/ChiayiCityFont-Bold.ttf": "/static/media/ChiayiCityFont-Bold.98e379d86bde80039eca.ttf",
     "static/media/Wood_Nice_Try.png": "/static/media/Wood_Nice_Try.b14da03454f8b26863c6.png",
     "static/media/Wood_Well_Done.png": "/static/media/Wood_Well_Done.5c5e6525639b5d0a3754.png",
@@ -27,13 +29,13 @@
     "static/media/Anima.ttf": "/static/media/Anima.64ad78d7dcfabc4ad231.ttf",
     "static/media/Quest_Game_UI_Menu_UI_Click_2_Balloon.mp3": "/static/media/Quest_Game_UI_Menu_UI_Click_2_Balloon.d7090fbd65607af55954.mp3",
     "index.html": "/index.html",
-    "main.be1fc115.css.map": "/static/css/main.be1fc115.css.map",
-    "main.8d36706e.js.map": "/static/js/main.8d36706e.js.map",
+    "main.ee1de483.css.map": "/static/css/main.ee1de483.css.map",
+    "main.7e625426.js.map": "/static/js/main.7e625426.js.map",
     "845.66a0e0c8.chunk.js.map": "/static/js/845.66a0e0c8.chunk.js.map",
     "787.c9c8973b.chunk.js.map": "/static/js/787.c9c8973b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.be1fc115.css",
-    "static/js/main.8d36706e.js"
+    "static/css/main.ee1de483.css",
+    "static/js/main.7e625426.js"
   ]
 }
