@@ -1,0 +1,40 @@
+.fishModel {
+    .fish {
+      position: relative;
+      width: 100%;
+      bottom: 20%;
+  
+      right: 80%;
+      &Model {
+        position: relative;
+  
+        svg {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+
+    .text {
+      position: absolute;
+      color: orangered;
+      font-weight: 400px;
+      font-size: 2rem; /* Use vw unit for responsive font size */
+      top: 20%; /* Adjust the percentage value for vertical positioning */
+      right: 100px;
+      z-index: 10;
+    }
+    
+    /* For larger screens, you may want to adjust the font size and position */
+    @media (min-width: 768px) {
+      .text {
+        font-size: 4rem; /* Set a fixed font size for larger screens */
+        left: 2%; /* Adjust the horizontal position for larger screens */
+        top: 20%; /* Adjust the vertical position for larger screens */
+        transform: translateX(-50%); /* Center the element horizontally */
+        left: 14%;
+      }
+    }
+  
+  }
+  

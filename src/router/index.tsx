@@ -9,7 +9,7 @@ import {
   HungryCrocodileInstruction,
 } from 'pages/HungryCrocodile';
 
-import { ShellWePickGame, ShellWePickIntro, ShellWePickResult } from 'pages/ShellWePick';
+import { ShellWePickGame, ShellWePickIntro, ShellWePickResult, ShallWePickInstruction } from 'pages/ShellWePick';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from '../pages/Home';
@@ -46,6 +46,7 @@ const Router = (): JSX.Element => (
         <Route index element={<ShellWePickGame />} />
         <Route path="intro" element={<ShellWePickIntro />} />
         <Route path="result" element={<ShellWePickResult />} />
+        <Route path="instruction" element={<ShallWePickInstruction />} />
       </Route>
     </Routes>
   </BrowserRouter>

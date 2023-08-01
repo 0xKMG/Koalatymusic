@@ -7,3 +7,5 @@ export * from './ImageButton';
 export * from './ScoreBoard';
 export * from './Svg';
 export * from './SvgBackground';
+export * from './KoalaModel';
+export * from './AnswerFish';

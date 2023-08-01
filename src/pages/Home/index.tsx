@@ -2,6 +2,7 @@ import woodBall from 'assets/images/Balloon_Party_Wood.png';
 import Ball from 'assets/images/Balloon_Party_Thumbnail.png';
 import woodCroc from 'assets/images/Hungry_Crocodile_Wood.png';
 import Croc from 'assets/images/Hungry_Crocodile_Thumbnail.png';
+import Shell from 'assets/images/Shellwethumbnail.png';
 import { GameList, MenuBackground } from 'assets/svgs';
 import classNames from 'classnames';
 import { ImageButton, SvgBackground } from 'components';
@@ -52,6 +53,17 @@ const Home = (): JSX.Element => {
                 Balloon Party:
                 <br />
                 Note spelling
+              </div>
+            </div>
+          </ImageButton>
+          <ImageButton onClick={() => gameSelection('/ShellWePick/intro')}>
+            <img src={woodCroc} className={styles.wood} alt="Balloon_Party_Wood" />
+            <div className={styles.gameListItem} style={{ marginTop: '3%' }}>
+              <img src={Shell} alt="Balloon_Party" style={{ height: 'calc(100% / 1090 * 538)' }} />
+              <div className={styles.game}>
+                Shell We Pick:
+                <br />
+                Music notes
               </div>
             </div>
           </ImageButton>

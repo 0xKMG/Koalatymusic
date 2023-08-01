@@ -6,6 +6,7 @@ export type Styles = {
   home: string;
   itemMove: string;
   model: string;
+  modelFish: string;
   paused: string;
   scaled: string;
   scoreBoard: string;

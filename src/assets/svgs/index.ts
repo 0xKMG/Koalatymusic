@@ -10,6 +10,9 @@ export * from './AppleStar';
 export * from './Balloon';
 export * from './BalloonIntoBassClef';
 export * from './BalloonIntoTrebleClef';
+export * from './ShellWeIntroTrebleClef';
+export * from './ShellWeIntroBassClef';
+export * from './ShellTrebleClefSpectrum';
 export * from './BassClef';
 export * from './BassStaff';
 export * from './BearHappy';
@@ -52,3 +55,8 @@ export * from './TrebleStaff';
 export * from './WellDone';
 export * from './WoodNiceTry';
 export * from './WoodWellDone';
+export * from './KoalaVariations'; // Koala variations
+export * from './PurpleShell';
+export * from './BlueShell';
+export * from './YellowShell';
+export * from './AnswerFish';

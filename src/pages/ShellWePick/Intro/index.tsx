@@ -1,12 +1,12 @@
 import { GameInstruction } from 'layouts';
-import background from 'assets/images/Balloon_Party_Game_Intro_Background.png';
+import background from 'assets/images/img/undersea01.png';
 import bass from 'assets/images/Balloon_Party_Level_Bass.png';
 import treble from 'assets/images/Balloon_Party_Level_Treble.png';
 import shuffle from 'assets/images/Balloon_Party_Level_Shuffle.png';
-import { BalloonIntoBassClef, BalloonIntoTrebleClef } from 'assets/svgs';
+import { ShellWeIntroBassClef, ShellWeIntroTrebleClef } from 'assets/svgs';
 import { ImageButton } from 'components';
 import { useRef, useState } from 'react';
-import { Spectrum } from 'types';
+import { ShellSpectrum } from 'types';
 import bassAudioEffect from 'assets/audio/Bass_Clef.mp3';
 import trebleAudioEffect from 'assets/audio/Treble_Clef.mp3';
 import useSound from 'use-sound';
@@ -17,22 +17,22 @@ import styles from './styles.module.scss';
 
 export const ShellWePickIntro = (): JSX.Element => {
   const navigate = useNavigate();
-  const { modeUpdate } = useGameMode('balloonPartyMode');
+  const { modeUpdate } = useGameMode('shellGameMode');
   const [playBass] = useSound(bassAudioEffect);
   const [playTreble] = useSound(trebleAudioEffect);
   // State
-  const [spectrum, setSpectrum] = useState<Spectrum>();
+  const [spectrum, setSpectrum] = useState<ShellSpectrum>();
   const [freeze, setFreeze] = useState<boolean>(true);
   // Reference
   const shuffleRef = useRef<boolean>(false);
 
-  const handleStartClick = (selection: Spectrum) => {
+  const handleStartClick = (selection: ShellSpectrum) => {
     if (shuffleRef.current) {
       return;
     }
     setFreeze(false);
     setSpectrum(selection);
-    if (selection === Spectrum.Bass) {
+    if (selection === ShellSpectrum.Bass) {
       playBass();
     } else {
       playTreble();
@@ -54,28 +54,38 @@ export const ShellWePickIntro = (): JSX.Element => {
     } while (time < 12);
     if (Math.random() > 0.5) {
       playBass();
-      setSpectrum(Spectrum.Bass);
+      setSpectrum(ShellSpectrum.Bass);
     } else {
       playTreble();
-      setSpectrum(Spectrum.Treble);
+      setSpectrum(ShellSpectrum.Treble);
     }
     shuffleRef.current = false;
     setFreeze(false);
   };
 
-  const handleGameStart = () => {
-    modeUpdate(spectrum as Spectrum);
-    navigate('/BalloonParty');
+  const handleInstruction = () => {
+    modeUpdate(spectrum as ShellSpectrum);
+    navigate('/ShellWePick/instruction');
   };
 
   return (
-    <GameInstruction backgroundImage={background} onStart={handleGameStart} disabled={freeze}>
+    <GameInstruction backgroundImage={background} onStart={handleInstruction} disabled={freeze}>
       <div className={styles.outer}>
         <div className={styles.level}>
-          <ImageButton className={styles.button} onClick={() => handleStartClick(Spectrum.Treble)}>
+          <ImageButton
+            className={
+            styles.button
+          }
+            onClick={() => handleStartClick(ShellSpectrum.Treble)}
+          >
             <img src={treble} alt="treble" />
           </ImageButton>
-          <ImageButton className={styles.button} onClick={() => handleStartClick(Spectrum.Bass)}>
+          <ImageButton
+            className={
+              styles.button
+}
+            onClick={() => handleStartClick(ShellSpectrum.Bass)}
+          >
             <img src={bass} alt="bass" />
           </ImageButton>
           <ImageButton className={styles.button} onClick={handleRandomPick}>
@@ -86,13 +96,13 @@ export const ShellWePickIntro = (): JSX.Element => {
         <div className={styles.spectrum}>
           {spectrum === undefined ? (
             <>
-              <BalloonIntoTrebleClef />
-              <BalloonIntoBassClef />
+              <ShellWeIntroTrebleClef />
+              <ShellWeIntroBassClef />
             </>
           ) : (
             {
-              [Spectrum.Treble]: <BalloonIntoTrebleClef />,
-              [Spectrum.Bass]: <BalloonIntoBassClef />,
+              [ShellSpectrum.Treble]: <ShellWeIntroTrebleClef />,
+              [ShellSpectrum.Bass]: <ShellWeIntroBassClef />,
             }[spectrum]
           )}
         </div>

@@ -1,5 +1,5 @@
 import { Dispatch } from 'redux';
-import { BALLOON_PARTY_MODE, CLEAR_GAMES_DETAIL, HUNGRY_CROCODILE_MODE } from './actionTypes';
+import { BALLOON_PARTY_MODE, CLEAR_GAMES_DETAIL, HUNGRY_CROCODILE_MODE, SHELL_GAME_MODE } from './actionTypes';
 import { GamesDetailState } from './reducer';
 
 const getActionType = (key: keyof GamesDetailState): string => {
@@ -8,6 +8,8 @@ const getActionType = (key: keyof GamesDetailState): string => {
       return BALLOON_PARTY_MODE;
     case 'hungryCrocodileMode':
       return HUNGRY_CROCODILE_MODE;
+    case 'shellGameMode':
+      return SHELL_GAME_MODE;
     default:
       return '';
   }
