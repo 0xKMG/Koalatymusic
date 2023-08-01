@@ -21,7 +21,7 @@ export const BACKGROUND_MUSIC: Partial<Record<PagesPathType, string>> = {
   [PagesPath.SplashScreen]: splashScreenAudio,
   [PagesPath.Menu]: muted,
   [PagesPath.Crocodile]: crocodile,
-  [PagesPath.CrocodileIntro]: crocodileIntro,
+  [PagesPath.CrocodileIntro]: muted,
   [PagesPath.Balloon]: muted,
   [PagesPath.BalloonIntro]: muted,
 };

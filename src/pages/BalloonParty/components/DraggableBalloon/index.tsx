@@ -96,7 +96,6 @@ export const DraggableBalloon = memo<IDraggableBalloonProps>(
         }
       });
     };
-
     // Reset balloon location after each stage
     useEffect(() => {
       if (answers.filter((ans) => ans.positionY === correctY && !ans.answered).length === 1) {
