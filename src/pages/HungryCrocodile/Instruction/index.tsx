@@ -3,8 +3,11 @@ import background from 'assets/images/Hungry_Crocodile_Game_Intro_Background.png
 import instructionPageLine from 'assets/images/instructionPageLine.png';
 import instructionPageSpace from 'assets/images/instructionPageSpace.png';
 import { useNavigate, useLocation } from 'react-router-dom';
+
 import { useGameMode } from 'hooks';
 import { CrocodileMode } from 'components';
+// Import the sound effects for each game mode
+
 import styles from './styles.module.scss';
 
 interface LocationState {
