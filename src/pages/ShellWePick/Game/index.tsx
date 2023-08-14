@@ -68,7 +68,7 @@ export const ShellWePickGame = (): JSX.Element => {
   };
 
   useEffect(() => {
-      // Assuming ShellTypes is an enum or object with keys representing shell types
+    // Assuming ShellTypes is an enum or object with keys representing shell types
     const availableShellTypes = Object.keys(ShellTypes);
     const shuffledLetters = shuffleArray(LETTERS);
     setanswerFishLetter(LETTERS[Math.floor(Math.random() * LETTERS.length)]);

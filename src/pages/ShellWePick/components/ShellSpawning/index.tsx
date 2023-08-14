@@ -1,4 +1,12 @@
-import { PurpleShell, BlueShell, YellowShell, OrangeShell, PinkShell, SunShell, GreenShell } from 'assets/svgs';
+import {
+  PurpleShell,
+  BlueShell,
+  YellowShell,
+  OrangeShell,
+  PinkShell,
+  SunShell,
+  GreenShell,
+} from 'assets/svgs';
 import { useWindowSize } from 'hooks';
 import { HTMLAttributes, memo, useEffect, useState } from 'react';
 import { ShellTypes, ShellNode } from 'types';
