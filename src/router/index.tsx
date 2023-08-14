@@ -9,7 +9,12 @@ import {
   HungryCrocodileInstruction,
 } from 'pages/HungryCrocodile';
 
-import { ShellWePickGame, ShellWePickIntro, ShellWePickResult, ShallWePickInstruction } from 'pages/ShellWePick';
+import {
+  ShellWePickGame,
+  ShellWePickIntro,
+  ShellWePickResult,
+  ShallWePickInstruction,
+} from 'pages/ShellWePick';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from '../pages/Home';

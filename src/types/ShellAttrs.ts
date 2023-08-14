@@ -1,15 +1,19 @@
 export enum ShellTypes {
-    Purple,
-    Blue,
-    Yellow,
-    // Pineapple,
-  }
+  Purple,
+  Blue,
+  Yellow,
+  Green,
+  Sun,
+  Pink,
+  Orange,
+  // Pineapple,
+}
 
 export interface ShellNode {
-    id: number;
-    shell: ShellTypes;
-    positionY: number;
-    positionX: number;
-    score: number;
-    // spectrumWidth: number;
-  }
+  id: number;
+  shell: ShellTypes;
+  positionY: number;
+  positionX: number;
+  letter: string;
+  // spectrumWidth: number;
+}

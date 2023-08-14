@@ -73,17 +73,13 @@ export const ShellWePickIntro = (): JSX.Element => {
       <div className={styles.outer}>
         <div className={styles.level}>
           <ImageButton
-            className={
-            styles.button
-          }
+            className={styles.button}
             onClick={() => handleStartClick(ShellSpectrum.Treble)}
           >
             <img src={treble} alt="treble" />
           </ImageButton>
           <ImageButton
-            className={
-              styles.button
-}
+            className={styles.button}
             onClick={() => handleStartClick(ShellSpectrum.Bass)}
           >
             <img src={bass} alt="bass" />

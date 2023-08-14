@@ -18,7 +18,6 @@ export const ShallWePickInstruction = (): JSX.Element => {
   return (
     <GameInstruction backgroundImage={background} onStart={handleGameStart}>
       <div className={styles.outer}>
-
         <div className={styles.inner}>
           <img
             style={{ maxWidth: '100%', maxHeight: '100%' }}

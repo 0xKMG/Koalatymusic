@@ -1,0 +1,28 @@
+
+.shellletter{
+    position: absolute;
+    left: 30%;
+    bottom: 25%;
+    font-size: 3vw;
+    color: black;
+    opacity: 0;
+    animation: fadeIn 10s forwards; // Apply a fadeIn animation
+    transition: opacity 0.3s ease; /* Add a smooth opacity transition for the hover effect */
+
+    &:hover {
+      opacity: 0.8; /* Increase opacity on hover */
+    }
+  }
+
+
+
+@keyframes fadeIn { 
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 0.5;
+    }
+  }
+
+

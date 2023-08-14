@@ -1,11 +1,13 @@
 import { Dispatch } from 'redux';
-import { HUNGRY_CROCODILE, CLEAR_GAMES_SCORE } from './actionTypes';
+import { HUNGRY_CROCODILE, CLEAR_GAMES_SCORE, SHELLWEPICK } from './actionTypes';
 import { GameScoreState } from './reducer';
 
 const getActionType = (key: keyof GameScoreState): string => {
   switch (key) {
     case 'hungryCrocodile':
       return HUNGRY_CROCODILE;
+    case 'shellWePick':
+      return SHELLWEPICK;
     default:
       return '';
   }
@@ -21,7 +23,7 @@ export const updateGameScore =
   (dispatch: Dispatch): ReturnType<UpdateGameScoreDispatchType> =>
     dispatch({
       type: getActionType(key),
-      payload: { [key]: value },
+      payload: { [key]: value } as GameScoreState, // Cast to GameScoreState
     });
 
 export const clearGamesScore =

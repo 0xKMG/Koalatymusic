@@ -1,7 +1,12 @@
 import { CrocodileMode } from 'components';
 import { AnyAction } from 'redux';
 import { Spectrum, ShellSpectrum } from 'types';
-import { BALLOON_PARTY_MODE, CLEAR_GAMES_DETAIL, HUNGRY_CROCODILE_MODE, SHELL_GAME_MODE } from './actionTypes';
+import {
+  BALLOON_PARTY_MODE,
+  CLEAR_GAMES_DETAIL,
+  HUNGRY_CROCODILE_MODE,
+  SHELL_GAME_MODE,
+} from './actionTypes';
 
 export type GamesDetailState = {
   balloonPartyMode: Spectrum;

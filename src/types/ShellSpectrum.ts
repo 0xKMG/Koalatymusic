@@ -1,7 +1,7 @@
 export enum ShellSpectrum {
-    Treble,
-    Bass,
-  }
+  Treble,
+  Bass,
+}
 
 export type ShellSpectrumName = keyof typeof ShellSpectrum;
 

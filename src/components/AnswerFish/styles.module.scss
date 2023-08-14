@@ -18,9 +18,9 @@
     .text {
       position: absolute;
       color: orangered;
-      font-weight: 400px;
+      font-weight: 800px;
       font-size: 2rem; /* Use vw unit for responsive font size */
-      top: 20%; /* Adjust the percentage value for vertical positioning */
+      top: 10%; /* Adjust the percentage value for vertical positioning */
       right: 100px;
       z-index: 10;
     }
@@ -28,13 +28,22 @@
     /* For larger screens, you may want to adjust the font size and position */
     @media (min-width: 768px) {
       .text {
-        font-size: 4rem; /* Set a fixed font size for larger screens */
-        left: 2%; /* Adjust the horizontal position for larger screens */
-        top: 20%; /* Adjust the vertical position for larger screens */
+        font-size: 5.5rem; /* Set a fixed font size for larger screens */
+        left: 60px; /* Adjust the horizontal position for larger screens */
+        top: 23%; /* Adjust the vertical position for larger screens */
         transform: translateX(-50%); /* Center the element horizontally */
-        left: 14%;
       }
     }
+
+    @media (min-width: 356px) and (max-width: 767px) {
+      .text {
+        font-size: 1.5rem; /* Set a smaller font size for smaller screens */
+        left: -5px; /* Adjust the horizontal position for smaller screens */
+        top: 18%; /* Adjust the vertical position for smaller screens */
+        transform: translateX(-50%); /* Center the element horizontally */
+      }
+    }
+    
   
   }
   
