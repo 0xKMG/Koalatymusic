@@ -43,7 +43,7 @@ export const ShellSpawning = memo<IShellSpawningProps>(
     useEffect(() => {
       const maxPositionX = mainmaxPositionX;
       const minPositionX = mainminPositionX;
-      let increment = 1.5; // Adjust the increment value to control the speed of movement
+      let increment = window.innerWidth * 0.003; // Adjust this value to control speed
       let currentPositionX = positionX; // Start with the initial positionX prop value
       const animateShells = () => {
         if (currentPositionX >= maxPositionX) {

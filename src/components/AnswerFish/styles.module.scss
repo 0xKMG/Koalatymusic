@@ -26,16 +26,34 @@
     }
     
     /* For larger screens, you may want to adjust the font size and position */
-    @media (min-width: 768px) {
+    @media (min-width: 1180px) {
       .text {
-        font-size: 5.5rem; /* Set a fixed font size for larger screens */
+        font-size: 3.5rem; /* Set a fixed font size for larger screens */
         left: 60px; /* Adjust the horizontal position for larger screens */
         top: 23%; /* Adjust the vertical position for larger screens */
         transform: translateX(-50%); /* Center the element horizontally */
       }
     }
 
-    @media (min-width: 356px) and (max-width: 767px) {
+    @media (min-width: 1181px) and (max-width: 3000px) {
+      .text {
+        font-size: 5rem; /* Set a fixed font size for larger screens */
+        left: 59px; /* Adjust the horizontal position for larger screens */
+        top: 22%; /* Adjust the vertical position for larger screens */
+        transform: translateX(-50%); /* Center the element horizontally */
+      }
+    }
+
+    @media (min-width: 768px) and (max-width: 1180px) {
+      .text {
+        font-size: 3.5rem; /* Set a fixed font size for larger screens */
+        left: 30px; /* Adjust the horizontal position for larger screens */
+        top: 22%; /* Adjust the vertical position for larger screens */
+        transform: translateX(-50%); /* Center the element horizontally */
+      }
+    }
+
+    @media (min-width: 280px) and (max-width: 767px) {
       .text {
         font-size: 1.5rem; /* Set a smaller font size for smaller screens */
         left: -5px; /* Adjust the horizontal position for smaller screens */

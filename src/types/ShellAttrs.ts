@@ -6,7 +6,6 @@ export enum ShellTypes {
   Sun,
   Pink,
   Orange,
-  // Pineapple,
 }
 
 export interface ShellNode {

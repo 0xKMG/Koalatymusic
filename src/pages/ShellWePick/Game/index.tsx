@@ -1,10 +1,10 @@
 import { ShellTrebleClefSpectrum, ShellBassClefSpectrum } from 'assets/svgs';
 import background from 'assets/images/img/undersea01.png';
 import { BackgroundImage, KoalaModel, AnswerFishModel } from 'components';
-import { useCountdown, useGameMode, useGameScore } from 'hooks';
+import { useGameMode, useGameScore, useCountup } from 'hooks';
 import { useEffect, useRef, useState, useCallback } from 'react';
 import { ShellNode, ShellTypes, ShellSpectrum } from 'types';
-import { GAME_TIME, LETTERS, SCORE_LIMIT } from 'constant';
+import { BASS_LETTERS, TREBLE_LETTERS, SCORE_LIMIT } from 'constant';
 import { BottomNav } from 'containers';
 import { useNavigate } from 'react-router-dom';
 import classNames from 'classnames';
@@ -14,7 +14,7 @@ import { ShellSpawning } from '../components';
 export const ShellWePickGame = (): JSX.Element => {
   // hooks
   const navigate = useNavigate();
-  const timeLeft = useCountdown(GAME_TIME);
+  const timeSpent = useCountup();
   const { scoreUpdate } = useGameScore('shellWePick');
   const { gameMode } = useGameMode('shellGameMode');
   // reference
@@ -27,9 +27,12 @@ export const ShellWePickGame = (): JSX.Element => {
   const [initialKoalaState, setinitialKoalaState] = useState<number>(80);
   const [initialKoalaStatus, setinitialKoalaStatus] = useState<number>(0);
   const [answerFishLetter, setanswerFishLetter] = useState<string>('');
-
+  const [shellIndex, setShellIndex] = useState<number>(0);
+  const [letterIndex, setLetterIndex] = useState<number>(0);
+  const LETTERS = gameMode === ShellSpectrum.Treble ? TREBLE_LETTERS : BASS_LETTERS;
+  const availableShellTypes = Object.keys(ShellTypes);
   const handleNavigation = () => {
-    if (timeLeft === 0 || scoreRef.current === SCORE_LIMIT) {
+    if (scoreRef.current === SCORE_LIMIT) {
       navigate('/ShellWePick/result');
     }
   };
@@ -37,7 +40,7 @@ export const ShellWePickGame = (): JSX.Element => {
   // Use useEffect to handle navigation based on conditions
   useEffect(() => {
     handleNavigation();
-  }, [timeLeft, scoreRef.current]);
+  }, [scoreRef.current]);
 
   const shellOnclick = useCallback(
     (id: number) => {
@@ -48,6 +51,8 @@ export const ShellWePickGame = (): JSX.Element => {
         setinitialKoalaStatus((prevState) => prevState + 1);
         setinitialKoalaState((prevState) => prevState - 5);
         scoreRef.current += 1;
+        setLetterIndex((prev) => prev - prev);
+        setShellIndex((prev) => prev - prev);
         setShells([]);
       } else {
         shell.setAttribute('style', 'opacity: 0;');
@@ -56,35 +61,46 @@ export const ShellWePickGame = (): JSX.Element => {
     [shellRef, answerFishLetter, setShells, setinitialKoalaStatus, setinitialKoalaState],
   );
 
-  // Shuffle an array using the Fisher-Yates shuffle algorithm
-  const shuffleArray = (array: string[]) => {
-    const shuffledArray = [...array];
-    // eslint-disable-next-line no-plusplus
-    for (let i: number = shuffledArray.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
-    }
-    return shuffledArray;
-  };
-
   useEffect(() => {
     // Assuming ShellTypes is an enum or object with keys representing shell types
-    const availableShellTypes = Object.keys(ShellTypes);
-    const shuffledLetters = shuffleArray(LETTERS);
+    // const shellArr = letterPOSITIONING.map((positionY, index) => ({
+    //   id: index + 1, // Use index as id for uniqueness
+    //   shell: Number(availableShellTypes[index]),
+    //   positionX: -100 + index * 50, // Calculate the initial positionX based on index
+    //   positionY, // Use the positionY from the array
+    //   // letter: LETTERS[Math.floor(Math.random() * LETTERS.length)],
+    //   letter: LETTERS[index],
+    //   // spectrumWidth: SPECTRUM_WIDTH,
+    // }));
+    // setShells(shellArr);
+    const interval = setInterval(() => {
+      if (shellIndex < availableShellTypes.length / 2) {
+        const newShell = {
+          id: shellIndex + 1,
+          shell: Number(availableShellTypes[shellIndex]),
+          positionX: -100 + shellIndex * 50,
+          positionY: Number(letterPOSITIONING[shellIndex]),
+          letter: LETTERS[letterIndex],
+        };
+
+        setShells((prevShells) => [...prevShells, newShell]);
+        setLetterIndex((prevIndex) => prevIndex + 1);
+        setShellIndex((prevIndex) => prevIndex + 1);
+      } else {
+        clearInterval(interval); // Stop the interval when all shells are spawned
+      }
+    }, 2200); // Spawn a shell every 1000ms (1 second)
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, [shellIndex, initialKoalaState]);
+
+  useEffect(() => {
     setanswerFishLetter(LETTERS[Math.floor(Math.random() * LETTERS.length)]);
-    const shellArr = letterPOSITIONING.map((positionY, index) => ({
-      id: index + 1, // Use index as id for uniqueness
-      shell: Number(availableShellTypes[index]),
-      positionX: -100 + index * 50, // Calculate the initial positionX based on index
-      positionY, // Use the positionY from the array
-      // letter: LETTERS[Math.floor(Math.random() * LETTERS.length)],
-      letter: shuffledLetters[index % shuffledLetters.length],
-      // spectrumWidth: SPECTRUM_WIDTH,
-    }));
-    setShells(shellArr);
+
     return () => {
       scoreUpdate(scoreRef.current);
-      setShells([]);
     };
   }, [initialKoalaState]);
 
@@ -121,7 +137,7 @@ export const ShellWePickGame = (): JSX.Element => {
             </div>
           </div>
         </div>
-        <BottomNav time={timeLeft} score={scoreRef.current} scoreBoard />
+        <BottomNav time={timeSpent} score={scoreRef.current} scoreBoard />
       </BackgroundImage>
     </div>
   );

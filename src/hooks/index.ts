@@ -4,3 +4,4 @@ export * from './useCountdown';
 export * from './useGameMode';
 export * from './useGameScore';
 export * from './useWindowSize';
+export * from './useCountup';
