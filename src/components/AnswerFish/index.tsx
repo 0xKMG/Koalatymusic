@@ -7,11 +7,11 @@ export interface IAnswerFishModelProps {
 }
 
 export const AnswerFishModel = memo<IAnswerFishModelProps>(({ letter }) => (
-  <div className={styles.fishModel}>
-    <div className={styles.text}>{letter}</div>
+  <div style={{ position: 'relative', right: '62%' }}>
     <div className={styles.fish}>
       <AnswerFish />
     </div>
+    <div className={styles.text}>{letter}</div>
   </div>
 ));
 
