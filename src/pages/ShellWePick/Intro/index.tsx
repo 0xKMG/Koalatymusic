@@ -3,7 +3,7 @@ import background from 'assets/images/img/undersea01.png';
 import bass from 'assets/images/Balloon_Party_Level_Bass.png';
 import treble from 'assets/images/Balloon_Party_Level_Treble.png';
 import shuffle from 'assets/images/Balloon_Party_Level_Shuffle.png';
-import { ShellWeIntroBassClef, ShellWeIntroTrebleClef } from 'assets/svgs';
+// import { ShellWeIntroBassClef, ShellWeIntroTrebleClef } from 'assets/svgs';
 import { ImageButton } from 'components';
 import { useRef, useState } from 'react';
 import { ShellSpectrum } from 'types';
@@ -89,7 +89,7 @@ export const ShellWePickIntro = (): JSX.Element => {
           </ImageButton>
         </div>
 
-        <div className={styles.spectrum}>
+        {/* <div className={styles.spectrum}>
           {spectrum === undefined ? (
             <>
               <ShellWeIntroTrebleClef />
@@ -101,7 +101,7 @@ export const ShellWePickIntro = (): JSX.Element => {
               [ShellSpectrum.Bass]: <ShellWeIntroBassClef />,
             }[spectrum]
           )}
-        </div>
+        </div> */}
       </div>
     </GameInstruction>
   );

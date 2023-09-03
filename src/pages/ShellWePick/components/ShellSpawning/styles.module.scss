@@ -6,7 +6,7 @@
     font-size: 3vw;
     color: black;
     opacity: 0;
-    animation: fadeIn 20s forwards; // Apply a fadeIn animation
+    animation: fadeIn 35s forwards; // Apply a fadeIn animation
     transition: opacity 0.3s ease; /* Add a smooth opacity transition for the hover effect */
 
     &:hover {
