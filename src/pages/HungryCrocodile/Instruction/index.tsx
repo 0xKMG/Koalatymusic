@@ -2,7 +2,7 @@ import { GameInstruction } from 'layouts';
 import background from 'assets/images/Hungry_Crocodile_Game_Intro_Background.png';
 import instructionPageLine from 'assets/images/instructionPageLine.png';
 import instructionPageSpace from 'assets/images/instructionPageSpace.png';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import { useGameMode } from 'hooks';
 import { CrocodileMode } from 'components';
@@ -10,18 +10,16 @@ import { CrocodileMode } from 'components';
 
 import styles from './styles.module.scss';
 
-interface LocationState {
-  gameMode: CrocodileMode; // Replace `number` with the type of `gameMode`
-}
-
 export const HungryCrocodileInstruction = (): JSX.Element => {
-  const navigate = useNavigate();
-  const location = useLocation();
-  const { gameMode } = location.state as LocationState;
   const { modeUpdate } = useGameMode('hungryCrocodileMode');
+
+  const gameMode = Math.floor(Math.random() * (Object.keys(CrocodileMode).length / 2));
+
+  const navigate = useNavigate();
+
   const handleGameStart = () => {
     modeUpdate(gameMode);
-    navigate('/HungryCrocodile');
+    navigate('/HungryCrocodile/instruction', { state: { gameMode } });
   };
 
   return (

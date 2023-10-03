@@ -6,7 +6,7 @@ import {
   CrocodileLine,
   CrocodileSpace,
 } from 'assets/svgs';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useGameMode } from 'hooks';
 import { CrocodileMode } from 'components';
@@ -16,12 +16,15 @@ import soundEffectSpace from 'assets/audio/sound_effect_space.mp3';
 
 import styles from './styles.module.scss';
 
+interface LocationState {
+  gameMode: CrocodileMode; // Replace `number` with the type of `gameMode`
+}
+
 export const HungryCrocodileIntro = (): JSX.Element => {
   const navigate = useNavigate();
+  const location = useLocation();
+  const { gameMode } = location.state as LocationState;
   const { modeUpdate } = useGameMode('hungryCrocodileMode');
-
-  const gameMode = Math.floor(Math.random() * (Object.keys(CrocodileMode).length / 2));
-
   useEffect(() => {
     const audioFile = gameMode === CrocodileMode.Line ? soundEffectLine : soundEffectSpace;
     const audio = new Audio(audioFile);
@@ -30,7 +33,7 @@ export const HungryCrocodileIntro = (): JSX.Element => {
 
   const handleGameStart = () => {
     modeUpdate(gameMode);
-    navigate('/HungryCrocodile/instruction', { state: { gameMode } });
+    navigate('/HungryCrocodile');
   };
 
   return (
