@@ -6,6 +6,9 @@ import { useNavigate } from 'react-router-dom';
 
 import { useGameMode } from 'hooks';
 import { CrocodileMode } from 'components';
+import soundEffectLine from 'assets/audio/sound_effect_line.mp3';
+import soundEffectSpace from 'assets/audio/sound_effect_space.mp3';
+
 // Import the sound effects for each game mode
 
 import styles from './styles.module.scss';
@@ -19,7 +22,15 @@ export const HungryCrocodileInstruction = (): JSX.Element => {
 
   const handleGameStart = () => {
     modeUpdate(gameMode);
-    navigate('/HungryCrocodile/intro', { state: { gameMode } });
+
+    const audioFile = gameMode === CrocodileMode.Line ? soundEffectLine : soundEffectSpace;
+    const audio = new Audio(audioFile);
+    audio
+      .play()
+      .then(() => {
+        navigate('/HungryCrocodile/intro', { state: { gameMode } });
+      })
+      .catch((error) => console.error('Audio play failed:', error));
   };
 
   return (

@@ -11,8 +11,6 @@ import { useEffect } from 'react';
 import { useGameMode } from 'hooks';
 import { CrocodileMode } from 'components';
 import classNames from 'classnames';
-import soundEffectLine from 'assets/audio/sound_effect_line.mp3';
-import soundEffectSpace from 'assets/audio/sound_effect_space.mp3';
 
 import styles from './styles.module.scss';
 
@@ -26,9 +24,6 @@ export const HungryCrocodileIntro = (): JSX.Element => {
   const { gameMode } = location.state as LocationState;
   const { modeUpdate } = useGameMode('hungryCrocodileMode');
 
-  const audioFile = gameMode === CrocodileMode.Line ? soundEffectLine : soundEffectSpace;
-  const audio = new Audio(audioFile);
-  audio.play();
 
   const handleGameStart = () => {
     modeUpdate(gameMode);
