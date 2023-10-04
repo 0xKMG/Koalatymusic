@@ -25,11 +25,10 @@ export const HungryCrocodileIntro = (): JSX.Element => {
   const location = useLocation();
   const { gameMode } = location.state as LocationState;
   const { modeUpdate } = useGameMode('hungryCrocodileMode');
-  useEffect(() => {
-    const audioFile = gameMode === CrocodileMode.Line ? soundEffectLine : soundEffectSpace;
-    const audio = new Audio(audioFile);
-    audio.play();
-  }, [gameMode]);
+
+  const audioFile = gameMode === CrocodileMode.Line ? soundEffectLine : soundEffectSpace;
+  const audio = new Audio(audioFile);
+  audio.play();
 
   const handleGameStart = () => {
     modeUpdate(gameMode);
