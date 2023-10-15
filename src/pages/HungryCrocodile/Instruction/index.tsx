@@ -4,9 +4,11 @@ import instructionPageLine from 'assets/images/instructionPageLine.png';
 import instructionPageSpace from 'assets/images/instructionPageSpace.png';
 import { useNavigate } from 'react-router-dom';
 
-import { useGameMode } from 'hooks';
+import { useAudioOnce, useGameMode } from 'hooks';
 import { CrocodileMode } from 'components';
 // Import the sound effects for each game mode
+import soundEffectLine from 'assets/audio/sound_effect_line.mp3';
+import soundEffectSpace from 'assets/audio/sound_effect_space.mp3';
 
 import styles from './styles.module.scss';
 
@@ -17,7 +19,14 @@ export const HungryCrocodileInstruction = (): JSX.Element => {
 
   const navigate = useNavigate();
 
+  const audioFile = gameMode === CrocodileMode.Line ? soundEffectLine : soundEffectSpace;
+
+  const { play } = useAudioOnce({
+    source: audioFile,
+  });
+
   const handleGameStart = () => {
+    play();
     modeUpdate(gameMode);
     navigate('/HungryCrocodile/intro', { state: { gameMode } });
   };
