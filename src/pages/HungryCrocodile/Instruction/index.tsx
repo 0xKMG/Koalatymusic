@@ -28,7 +28,7 @@ export const HungryCrocodileInstruction = (): JSX.Element => {
   const handleGameStart = () => {
     play();
     modeUpdate(gameMode);
-    navigate('/HungryCrocodile');
+    navigate('/HungryCrocodile/intro', { state: { gameMode } });
   };
 
   return (
