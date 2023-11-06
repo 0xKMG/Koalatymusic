@@ -1,13 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.ee1de483.css",
-    "main.js": "/static/js/main.7e625426.js",
+    "main.css": "/static/css/main.3e621456.css",
+    "main.js": "/static/js/main.f4121b45.js",
     "static/js/845.66a0e0c8.chunk.js": "/static/js/845.66a0e0c8.chunk.js",
     "static/js/787.c9c8973b.chunk.js": "/static/js/787.c9c8973b.chunk.js",
-    "static/media/Kids_are_Happy.mp3": "/static/media/Kids_are_Happy.2193b752c7dd371f4fc3.mp3",
     "static/media/Funny_Children's_Games.mp3": "/static/media/Funny_Children's_Games.d865f0aa48af8715502b.mp3",
+    "static/media/shell_guide01.png": "/static/media/shell_guide01.5bcbdae68991feeafc91.png",
+    "static/media/shell_guide03.png": "/static/media/shell_guide03.db2cb797b37f81bcb067.png",
+    "static/media/Shellwethumbnail.png": "/static/media/Shellwethumbnail.283e2e43ff6639e3cbf4.png",
     "static/media/Balloon_Party_Game_Intro_Background.png": "/static/media/Balloon_Party_Game_Intro_Background.e832f956d1bdd7a1351c.png",
     "static/media/Hungry_Crocodile_Game_Intro_Background.png": "/static/media/Hungry_Crocodile_Game_Intro_Background.a8f3b6f75076ab4a7713.png",
+    "static/media/undersea01.png": "/static/media/undersea01.844083aeefec66e5ae9e.png",
     "static/media/Balloon_Party_Thumbnail.png": "/static/media/Balloon_Party_Thumbnail.3a6160ab43eff18e3c45.png",
     "static/media/Hungry_Crocodile_Wood.png": "/static/media/Hungry_Crocodile_Wood.e9843084a4e1b854ce09.png",
     "static/media/Balloon_Party_Wood.png": "/static/media/Balloon_Party_Wood.627e7d8b47bea3842afb.png",
@@ -27,15 +30,18 @@
     "static/media/Treble_Clef.mp3": "/static/media/Treble_Clef.3ef65c550d00b0f0bc96.mp3",
     "static/media/Bass_Clef.mp3": "/static/media/Bass_Clef.6c96bbf31732c45ef981.mp3",
     "static/media/Anima.ttf": "/static/media/Anima.64ad78d7dcfabc4ad231.ttf",
+    "static/media/CursorHand.svg": "/static/media/CursorHand.a5d459605c37e7e3619e.svg",
+    "static/media/sound_effect_space.mp3": "/static/media/sound_effect_space.3569cb8f651502d5ca3a.mp3",
+    "static/media/sound_effect_line.mp3": "/static/media/sound_effect_line.923f1d3aa5bf98da2f2a.mp3",
     "static/media/Quest_Game_UI_Menu_UI_Click_2_Balloon.mp3": "/static/media/Quest_Game_UI_Menu_UI_Click_2_Balloon.d7090fbd65607af55954.mp3",
     "index.html": "/index.html",
-    "main.ee1de483.css.map": "/static/css/main.ee1de483.css.map",
-    "main.7e625426.js.map": "/static/js/main.7e625426.js.map",
+    "main.3e621456.css.map": "/static/css/main.3e621456.css.map",
+    "main.f4121b45.js.map": "/static/js/main.f4121b45.js.map",
     "845.66a0e0c8.chunk.js.map": "/static/js/845.66a0e0c8.chunk.js.map",
     "787.c9c8973b.chunk.js.map": "/static/js/787.c9c8973b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ee1de483.css",
-    "static/js/main.7e625426.js"
+    "static/css/main.3e621456.css",
+    "static/js/main.f4121b45.js"
   ]
 }
